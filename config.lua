@@ -39,6 +39,15 @@ doom.use_package({
   end,
 })
 
+doom.use_package({
+  "weirongxu/plantuml-previewer.vim",
+  config = function()
+    vim.keymap.set('n', '<leader>pp', ':PlantumlOpen<CR>')
+  end,
+})
+doom.use_package("tyru/open-browser.vim")
+doom.use_package("aklt/plantuml-syntax")
+
 -- doom.use_package({
 --   "ur4ltz/surround.nvim",
 --   config = function()
