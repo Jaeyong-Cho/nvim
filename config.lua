@@ -48,6 +48,21 @@ doom.use_package({
 doom.use_package("tyru/open-browser.vim")
 doom.use_package("aklt/plantuml-syntax")
 
+doom.use_package({
+  "iamcco/markdown-preview.nvim",
+  cmd = { "MarkdownPreview", "MarkdownPreviewStop", "MarkdownPreviewToggle" },
+  build = "cd app && yarn install",
+  init = function()
+    vim.g.mkdp_filetypes = {"markdown", "md", "mkd"}
+  end,
+  ft = {"markdown", "md", "mkd"},
+  config = function()
+    vim.keymap.set('n', '<leader>mp', ':MarkdownPreview<CR>')
+    vim.keymap.set('n', '<leader>ms', ':MarkdownPreviewStop<CR>')
+    vim.keymap.set('n', '<leader>mt', ':MarkdownPreviewToggle<CR>')
+  end,
+})
+
 -- doom.use_package({
 --   "ur4ltz/surround.nvim",
 --   config = function()
