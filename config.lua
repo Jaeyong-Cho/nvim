@@ -63,6 +63,42 @@ doom.use_package({
   end,
 })
 
+doom.use_package({
+  "christoomey/vim-tmux-navigator",
+  cmd = {
+    "TmuxNavigateLeft",
+    "TmuxNavigateDown",
+    "TmuxNavigateUp",
+    "TmuxNavigateRight",
+    "TmuxNavigatePrevious",
+  },
+  keys = {
+    { "<c-h>", "<cmd><C-U>TmuxNavigateLeft<cr>" },
+    { "<c-j>", "<cmd><C-U>TmuxNavigateDown<cr>" },
+    { "<c-k>", "<cmd><C-U>TmuxNavigateUp<cr>" },
+    { "<c-l>", "<cmd><C-U>TmuxNavigateRight<cr>" },
+    { "<c-\\>", "<cmd><C-U>TmuxNavigatePrevious<cr>" },
+  },
+})
+
+doom.use_package({
+    "kawre/leetcode.nvim",
+    build = ":TSUpdate html",
+    dependencies = {
+        "nvim-telescope/telescope.nvim",
+        "nvim-lua/plenary.nvim", -- required by telescope
+        "MunifTanjim/nui.nvim",
+
+        -- optional
+        "nvim-treesitter/nvim-treesitter",
+        "rcarriga/nvim-notify",
+        "nvim-tree/nvim-web-devicons",
+    },
+    opts = {
+        -- configuration goes here
+    },
+})
+
 -- doom.use_package({
 --   "ur4ltz/surround.nvim",
 --   config = function()
@@ -107,17 +143,17 @@ vim.cmd("set scrolljump=30")
 vim.cmd("set tags+=./tags")
 vim.cmd("set t_Co=256")
 
-vim.keymap.set('i', '<C-F>', 'copilot#Accept("\\<CR>")', {
+vim.keymap.set('i', '<c-f>', 'copilot#Accept("\\<CR>")', {
   expr = true,
   replace_keycodes = false
 })
 
-vim.keymap.set('i', '<C-J>', '<Plug>(copilot-next)', {
+vim.keymap.set('i', '<c-j>', '<Plug>(copilot-next)', {
   expr = false,
   replace_keycodes = false
 })
 
-vim.keymap.set('i', '<C-K>', '<Plug>(copilot-previous)', {
+vim.keymap.set('i', '<c-k>', '<Plug>(copilot-previous)', {
   expr = false,
   replace_keycodes = false
 })
