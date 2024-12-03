@@ -99,6 +99,12 @@ doom.use_package({
     },
 })
 
+doom.use_package({
+    "preservim/tagbar",
+})
+vim.cmd("nmap <F8> :TagbarToggle<CR>")
+vim.cmd("autocmd FileType python,c,cpp TagbarOpen")
+
 -- doom.use_package({
 --   "ur4ltz/surround.nvim",
 --   config = function()
