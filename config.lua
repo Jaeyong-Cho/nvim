@@ -64,21 +64,8 @@ doom.use_package({
 })
 
 doom.use_package({
-  "christoomey/vim-tmux-navigator",
-  cmd = {
-    "TmuxNavigateLeft",
-    "TmuxNavigateDown",
-    "TmuxNavigateUp",
-    "TmuxNavigateRight",
-    "TmuxNavigatePrevious",
-  },
-  keys = {
-    { "<c-h>", "<cmd><C-U>TmuxNavigateLeft<cr>" },
-    { "<c-j>", "<cmd><C-U>TmuxNavigateDown<cr>" },
-    { "<c-k>", "<cmd><C-U>TmuxNavigateUp<cr>" },
-    { "<c-l>", "<cmd><C-U>TmuxNavigateRight<cr>" },
-    { "<c-\\>", "<cmd><C-U>TmuxNavigatePrevious<cr>" },
-  },
+    "aserowy/tmux.nvim",
+    config = function() return require("tmux").setup() end
 })
 
 doom.use_package({
@@ -96,6 +83,95 @@ doom.use_package({
     },
     opts = {
         -- configuration goes here
+    {
+      ---@type string
+      arg = "leetcode.nvim",
+
+      ---@type lc.lang
+      lang = "cpp",
+
+      cn = { -- leetcode.cn
+        enabled = false, ---@type boolean
+        translator = true, ---@type boolean
+        translate_problems = true, ---@type boolean
+      },
+
+      ---@type lc.storage
+      storage = {
+        home = vim.fn.stdpath("data") .. "/leetcode",
+        cache = vim.fn.stdpath("cache") .. "/leetcode",
+      },
+
+      ---@type table<string, boolean>
+      plugins = {
+        non_standalone = false,
+      },
+
+      ---@type boolean
+      logging = true,
+
+      injector = {}, ---@type table<lc.lang, lc.inject>
+
+      cache = {
+        update_interval = 60 * 60 * 24 * 7, ---@type integer 7 days
+      },
+
+      console = {
+        open_on_runcode = true, ---@type boolean
+
+        dir = "row", ---@type lc.direction
+
+        size = { ---@type lc.size
+          width = "90%",
+          height = "75%",
+        },
+
+        result = {
+          size = "60%", ---@type lc.size
+        },
+
+        testcase = {
+          virt_text = true, ---@type boolean
+
+          size = "40%", ---@type lc.size
+        },
+      },
+
+      description = {
+        position = "left", ---@type lc.position
+
+        width = "40%", ---@type lc.size
+
+        show_stats = true, ---@type boolean
+      },
+
+      hooks = {
+        ---@type fun()[]
+        ["enter"] = {},
+
+        ---@type fun(question: lc.ui.Question)[]
+        ["question_enter"] = {},
+
+        ---@type fun()[]
+        ["leave"] = {},
+      },
+
+      keys = {
+        toggle = { "q" }, ---@type string|string[]
+        confirm = { "<CR>" }, ---@type string|string[]
+
+        reset_testcases = "r", ---@type string
+        use_testcase = "U", ---@type string
+        focus_testcases = "H", ---@type string
+        focus_result = "L", ---@type string
+      },
+
+      ---@type lc.highlights
+      theme = {},
+
+      ---@type boolean
+      image_support = false,
+    }
     },
 })
 
@@ -149,17 +225,17 @@ vim.cmd("set scrolljump=30")
 vim.cmd("set tags+=./tags")
 vim.cmd("set t_Co=256")
 
-vim.keymap.set('i', '<c-f>', 'copilot#Accept("\\<CR>")', {
+vim.keymap.set('i', '<C-F>', 'copilot#Accept("\\<CR>")', {
   expr = true,
   replace_keycodes = false
 })
 
-vim.keymap.set('i', '<c-j>', '<Plug>(copilot-next)', {
+vim.keymap.set('i', '<C-J>', '<Plug>(copilot-next)', {
   expr = false,
   replace_keycodes = false
 })
 
-vim.keymap.set('i', '<c-k>', '<Plug>(copilot-previous)', {
+vim.keymap.set('i', '<C-K>', '<Plug>(copilot-previous)', {
   expr = false,
   replace_keycodes = false
 })
