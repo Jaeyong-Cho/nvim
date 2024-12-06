@@ -225,17 +225,17 @@ vim.cmd("set scrolljump=30")
 vim.cmd("set tags+=./tags")
 vim.cmd("set t_Co=256")
 
-vim.keymap.set('i', '<C-F>', 'copilot#Accept("\\<CR>")', {
+vim.keymap.set('i', '<c-f>', 'copilot#Accept("\\<CR>")', {
   expr = true,
   replace_keycodes = false
 })
 
-vim.keymap.set('i', '<C-J>', '<Plug>(copilot-next)', {
+vim.keymap.set('i', '<c-j>', '<Plug>(copilot-next)', {
   expr = false,
   replace_keycodes = false
 })
 
-vim.keymap.set('i', '<C-K>', '<Plug>(copilot-previous)', {
+vim.keymap.set('i', '<c-k>', '<Plug>(copilot-previous)', {
   expr = false,
   replace_keycodes = false
 })
