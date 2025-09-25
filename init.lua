@@ -5,8 +5,8 @@ vim.cmd.colorscheme("kanagawa-paper-ink")
 -- encoding
 vim.opt.encoding = "utf-8"
 -- backup
-vim.opt.backup = true
-vim.opt.writebackup = true
+vim.opt.backup = false
+vim.opt.writebackup = false
 vim.opt.clipboard = "unnamedplus"
 vim.opt.number = true
 vim.opt.relativenumber = true
@@ -14,6 +14,21 @@ vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
 vim.opt.smartindent = true
+-- yank highlight
+vim.api.nvim_create_autocmd("TextYankPost", {
+	callback = function()
+		vim.highlight.on_yank()
+	end,
+})
+-- cursor line
+vim.opt.cursorline = true
+-- search highlight
+vim.opt.hlsearch = true
+vim.opt.incsearch = true
+-- scrolloff 20 percent of screen height
+vim.opt.scrolloff = math.floor(vim.o.lines * 0.2)
+-- signcolumn
+vim.opt.signcolumn = "yes"
 
 vim.keymap.set({ "n", "t" }, "<C-h>", ":NavigatorLeft<CR>")
 vim.keymap.set({ "n", "t" }, "<C-l>", ":NavigatorRight<CR>")
