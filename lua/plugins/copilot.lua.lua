@@ -14,6 +14,14 @@ return {
             {
 		    suggestion = {
 			    auto_trigger = true,
+			    keymap = {
+				    accept = "<C-f>",
+				    accept_word = "<C-l>",
+				    accept_line = "<C-j>",
+				    next = "<C-]>",
+				    prev = "<C-[>",
+                    dismiss = "<C-e>",
+			    },
 		    }
 	    }
         )
