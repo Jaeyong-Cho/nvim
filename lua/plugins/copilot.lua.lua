@@ -20,7 +20,7 @@ return {
 				    accept_line = "<C-j>",
 				    next = "<C-]>",
 				    prev = "<C-[>",
-                    dismiss = "<C-e>",
+                    dismiss = "<C-c>",
 			    },
 		    }
 	    }
