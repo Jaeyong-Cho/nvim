@@ -13,3 +13,5 @@ vim.keymap.set({'n', 't'}, '<C-p>', ':NavigatorPrevious<CR>')
 vim.keymap.set({'n', 't'}, '<leader>ff', ':FzfLua files<CR>')
 
 vim.keymap.set({'n', 't'}, '<leader>cc', ':CopilotChat<CR>')
+
+vim.keymap.set({'n', 't'}, '<leader>gg', ':Neogit<CR>')
