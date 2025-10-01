@@ -2,13 +2,14 @@
 -- Installed via store.nvim
 
 return {
-    "CopilotC-Nvim/CopilotChat.nvim",
-    dependencies = {
-        {
-            "nvim-lua/plenary.nvim",
-            branch = "master"
-        }
-    },
-    build = "make tiktoken",
-    opts = {}
+	"CopilotC-Nvim/CopilotChat.nvim",
+	dependencies = {
+		{
+			"nvim-lua/plenary.nvim",
+			branch = "master",
+		},
+	},
+	build = "make tiktoken",
+	opts = {},
 }
+

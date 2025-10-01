@@ -15,9 +15,10 @@ return {
 		require("conform").setup({
 			formatters_by_ft = {
 				lua = { "stylua" },
-				python = { "black" },
+				-- python = { "black" },
 				javascript = { "prettierd" },
 				typescript = { "prettierd" },
+				react = { "prettierd" },
 				c = { "clang_format" },
 				cpp = { "clang_format" },
 				["*"] = { "trim_whitespace", "remove_trailing_lines" },
