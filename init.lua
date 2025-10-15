@@ -34,12 +34,13 @@ vim.keymap.set({ "n", "t" }, "<leader>wh", ":NavigatorLeft<CR>")
 vim.keymap.set({ "n", "t" }, "<leader>wl", ":NavigatorRight<CR>")
 vim.keymap.set({ "n", "t" }, "<leader>wk", ":NavigatorUp<CR>")
 vim.keymap.set({ "n", "t" }, "<leader>wj", ":NavigatorDown<CR>")
-vim.keymap.set({ "n", "t" }, "<leader>ww", ":NavigatorPrevious<CR>")
+-- vim.keymap.set({ "n", "t" }, "<leader>ww", ":NavigatorPrevious<CR>")
 
 vim.keymap.set({ "n", "t" }, "<leader>ff", ":FzfLua files<CR>")
 vim.keymap.set({ "n", "t" }, "<leader>cc", ":CopilotChat<CR>")
 vim.keymap.set({ "n", "t" }, "<leader>cm", ":CopilotChatCommit<CR>")
 vim.keymap.set({ "n", "t" }, "<leader>gg", ":Neogit<CR>")
+vim.keymap.set({ "n", "t" }, "<leader>cp", ":ColorPickOklch<CR>")
 
 vim.keymap.set({ "i", "t" }, "jk", "<ESC>:w<CR>")
 
