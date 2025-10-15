@@ -10,6 +10,7 @@ return {
 		},
 	},
 	build = "make tiktoken",
-	opts = {},
+	opts = {
+		model = "claude-sonnet-4.5",
+	},
 }
-
