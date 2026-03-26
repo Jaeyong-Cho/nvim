@@ -30,10 +30,10 @@ vim.opt.scrolloff = math.floor(vim.o.lines * 0.2)
 -- signcolumn
 vim.opt.signcolumn = "yes"
 
-vim.keymap.set({ "n", "t" }, "<leader>wh", ":NavigatorLeft<CR>")
-vim.keymap.set({ "n", "t" }, "<leader>wl", ":NavigatorRight<CR>")
-vim.keymap.set({ "n", "t" }, "<leader>wk", ":NavigatorUp<CR>")
-vim.keymap.set({ "n", "t" }, "<leader>wj", ":NavigatorDown<CR>")
+vim.keymap.set({ "n", "t" }, "<C-h>", ":NavigatorLeft<CR>")
+vim.keymap.set({ "n", "t" }, "<C-l>", ":NavigatorRight<CR>")
+vim.keymap.set({ "n", "t" }, "<C-k>", ":NavigatorUp<CR>")
+vim.keymap.set({ "n", "t" }, "<C-j>", ":NavigatorDown<CR>")
 -- vim.keymap.set({ "n", "t" }, "<leader>ww", ":NavigatorPrevious<CR>")
 
 vim.keymap.set({ "n", "t" }, "<leader>ff", ":FzfLua files<CR>")
