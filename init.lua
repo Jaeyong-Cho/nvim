@@ -50,3 +50,9 @@ vim.keymap.set("n", "<leader>q", ":bd<CR>")
 
 -- keymap for hop to f
 vim.keymap.set("n", "f", ":HopWord<CR>")
+
+vim.keymap.set('i', '<TAB>', 'copilot#Accept("\\<CR>")', {
+  expr = true,
+  replace_keycodes = false
+})
+vim.g.copilot_no_tab_map = true
