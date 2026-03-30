@@ -22,7 +22,10 @@ return {
 				    prev = "<C-[>",
                     dismiss = "<C-c>",
 			    },
-		    }
+		    },
+			filetypes = {
+					["*"] = true,
+			}
 	    }
         )
     end
