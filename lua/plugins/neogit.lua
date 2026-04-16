@@ -14,5 +14,11 @@ return {
             fzf_lua = true,
         },
         graph_style = "unicode",
+        highlight = {
+            green = "#76946A",
+            bg_green = "#2B3328",
+            red = "#C34043",
+            bg_red = "#43242B",
+        },
     },
 }
