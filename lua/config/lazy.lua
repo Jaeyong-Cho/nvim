@@ -32,5 +32,11 @@ require("lazy").setup({
   install = { colorscheme = { "kanagawa-paper-ink" } },
   -- automatically check for plugin updates
   checker = { enabled = true },
+})
 
+vim.api.nvim_create_autocmd("VimEnter", {
+  once = true,
+  callback = function()
+    require("lazy").update({ show = false })
+  end,
 })
