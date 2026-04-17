@@ -5,6 +5,7 @@ return {
             preferred_picker = "fzf",
             preferred_completion = "nvim-cmp",
             keymap_prefix = "<leader>o",
+            default_mode = "build,
         })
     end,
     dependencies = {
