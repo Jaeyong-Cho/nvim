@@ -60,3 +60,14 @@ vim.keymap.set('i', '<C-f>', 'copilot#Accept("\\<CR>")', {
   replace_keycodes = false
 })
 vim.g.copilot_no_tab_map = true
+
+-- F3: insert timestamp HH:MM:SS
+vim.keymap.set("n", "<F3>", function()
+	vim.api.nvim_put({ os.date("%H:%M:%S") }, "c", true, true)
+end)
+vim.keymap.set("i", "<F3>", function()
+	local ts = os.date("%H:%M:%S")
+	local row, col = unpack(vim.api.nvim_win_get_cursor(0))
+	vim.api.nvim_buf_set_text(0, row - 1, col, row - 1, col, { ts })
+	vim.api.nvim_win_set_cursor(0, { row, col + #ts })
+end)
