@@ -2,6 +2,15 @@ require("config.lazy")
 
 vim.cmd.colorscheme("kanagawa-paper-ink")
 
+if vim.g.neovide then
+	vim.g.neovide_cursor_vfx_mode = "pixiedust"
+	vim.g.neovide_cursor_vfx_opacity = 500.0
+	vim.g.neovide_cursor_vfx_particle_lifetime = 5.0
+	vim.g.neovide_cursor_vfx_particle_highlight_lifetime = 0.4
+	vim.g.neovide_cursor_vfx_particle_density = 1.4
+	vim.g.neovide_cursor_vfx_particle_speed = 5.0
+end
+
 -- encoding
 vim.opt.encoding = "utf-8"
 -- backup
@@ -40,10 +49,10 @@ vim.keymap.set({ "n", "t" }, "<leader>ff", ":FzfLua files<CR>")
 vim.keymap.set({ "n", "t" }, "<leader>cc", ":CopilotChat<CR>")
 vim.keymap.set({ "n", "t" }, "<leader>cm", ":CopilotChatCommit<CR>")
 vim.keymap.set({ "n", "t" }, "<leader>gg", ":Neogit<CR>")
-vim.keymap.set("n", "<leader>gd", ":DiffviewOpen<CR>",          { desc = "Git diff (all)" })
+vim.keymap.set("n", "<leader>gd", ":DiffviewOpen<CR>", { desc = "Git diff (all)" })
 vim.keymap.set("n", "<leader>gh", ":DiffviewFileHistory %<CR>", { desc = "Git file history" })
-vim.keymap.set("n", "<leader>gH", ":DiffviewFileHistory<CR>",   { desc = "Git repo history" })
-vim.keymap.set("n", "<leader>gc", ":DiffviewClose<CR>",         { desc = "Close diffview" })
+vim.keymap.set("n", "<leader>gH", ":DiffviewFileHistory<CR>", { desc = "Git repo history" })
+vim.keymap.set("n", "<leader>gc", ":DiffviewClose<CR>", { desc = "Close diffview" })
 vim.keymap.set({ "n", "t" }, "<leader>cp", ":ColorPickOklch<CR>")
 
 vim.keymap.set({ "i", "t" }, "jk", "<ESC>:w<CR>")
@@ -55,9 +64,9 @@ vim.keymap.set("n", "<leader>q", ":bd<CR>")
 -- keymap for hop to f
 vim.keymap.set("n", "f", ":HopWord<CR>")
 
-vim.keymap.set('i', '<C-f>', 'copilot#Accept("\\<CR>")', {
-  expr = true,
-  replace_keycodes = false
+vim.keymap.set("i", "<C-f>", 'copilot#Accept("\\<CR>")', {
+	expr = true,
+	replace_keycodes = false,
 })
 vim.g.copilot_no_tab_map = true
 
