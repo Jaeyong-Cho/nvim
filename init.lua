@@ -80,3 +80,8 @@ vim.keymap.set("i", "<F3>", function()
 	vim.api.nvim_buf_set_text(0, row - 1, col, row - 1, col, { ts })
 	vim.api.nvim_win_set_cursor(0, { row, col + #ts })
 end)
+
+vim.o.autoread = true
+vim.api.nvim_create_autocmd({ "FocusGained", "BufEnter", "CursorHold" }, {
+    command = "checktime",
+})
