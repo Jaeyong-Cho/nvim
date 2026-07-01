@@ -46,13 +46,9 @@ vim.keymap.set({ "n", "t" }, "<C-j>", ":NavigatorDown<CR>")
 -- vim.keymap.set({ "n", "t" }, "<leader>ww", ":NavigatorPrevious<CR>")
 
 vim.keymap.set({ "n", "t" }, "<leader>ff", ":FzfLua files<CR>")
-vim.keymap.set({ "n", "t" }, "<leader>cc", ":CopilotChat<CR>")
-vim.keymap.set({ "n", "t" }, "<leader>cm", ":CopilotChatCommit<CR>")
 vim.keymap.set({ "n", "t" }, "<leader>gg", ":Neogit<CR>")
-vim.keymap.set("n", "<leader>gd", ":DiffviewOpen<CR>", { desc = "Git diff (all)" })
-vim.keymap.set("n", "<leader>gh", ":DiffviewFileHistory %<CR>", { desc = "Git file history" })
-vim.keymap.set("n", "<leader>gH", ":DiffviewFileHistory<CR>", { desc = "Git repo history" })
-vim.keymap.set("n", "<leader>gc", ":DiffviewClose<CR>", { desc = "Close diffview" })
+vim.keymap.set("n", "<leader>do", ":DiffviewOpen<CR>", { desc = "Git diff (all)" })
+vim.keymap.set("n", "<leader>dd", ":DiffviewClose<CR>", { desc = "Close diffview" })
 vim.keymap.set({ "n", "t" }, "<leader>cp", ":ColorPickOklch<CR>")
 
 vim.keymap.set({ "i", "t" }, "jk", "<ESC>:w<CR>")
@@ -80,8 +76,3 @@ vim.keymap.set("i", "<F3>", function()
 	vim.api.nvim_buf_set_text(0, row - 1, col, row - 1, col, { ts })
 	vim.api.nvim_win_set_cursor(0, { row, col + #ts })
 end)
-
-vim.o.autoread = true
-vim.api.nvim_create_autocmd({ "FocusGained", "BufEnter", "CursorHold" }, {
-    command = "checktime",
-})
