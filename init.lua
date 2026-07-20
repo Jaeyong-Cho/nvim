@@ -2,6 +2,7 @@ require("config.lazy")
 
 -- vim.cmd.colorscheme("kanagawa-paper-ink")
 vim.cmd.colorscheme("token")
+vim.o.background = "light"
 
 if vim.g.neovide then
 	vim.o.guifont = "Jetendard:h16"
