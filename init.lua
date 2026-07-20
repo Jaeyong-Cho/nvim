@@ -3,6 +3,7 @@ require("config.lazy")
 vim.cmd.colorscheme("kanagawa-paper-ink")
 
 if vim.g.neovide then
+	vim.o.guifont = "Jetendard:h16"
 	vim.g.neovide_cursor_vfx_mode = "pixiedust"
 	vim.g.neovide_cursor_vfx_opacity = 500.0
 	vim.g.neovide_cursor_vfx_particle_lifetime = 5.0
@@ -45,6 +46,7 @@ vim.keymap.set({ "n", "t" }, "<C-k>", ":NavigatorUp<CR>")
 vim.keymap.set({ "n", "t" }, "<C-j>", ":NavigatorDown<CR>")
 -- vim.keymap.set({ "n", "t" }, "<leader>ww", ":NavigatorPrevious<CR>")
 
+vim.keymap.set({ "n", "t" }, "<leader>tt", ":TodoFzfLua<CR>")
 vim.keymap.set({ "n", "t" }, "<leader>ff", ":FzfLua files<CR>")
 vim.keymap.set({ "n", "t" }, "<leader>gg", ":Neogit<CR>")
 vim.keymap.set("n", "<leader>do", ":DiffviewOpen<CR>", { desc = "Git diff (all)" })
