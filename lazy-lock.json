@@ -26,7 +26,7 @@
   "neogit": { "branch": "master", "commit": "f8674ec894315c02449b61c9de9a116c5aafeb90" },
   "neowiki.nvim": { "branch": "main", "commit": "85dddf6057b07d4d6772b2f90e754a18e958a865" },
   "nvim-colorizer.lua": { "branch": "master", "commit": "72a05f62c52241bc7441c820eb53946f92b2e6a4" },
-  "nvim-lspconfig": { "branch": "master", "commit": "e7ca2c95ba316a8b846d3f3546d407908c5c4ccb" },
+  "nvim-lspconfig": { "branch": "master", "commit": "7f87dbb4707f54117e98ab8f15d6a2975b3f13f0" },
   "nvim-notify": { "branch": "master", "commit": "8701bece920b38ea289b457f902e2ad184131a5d" },
   "nvim-origami": { "branch": "main", "commit": "02312301df125908031b27dc556adb4cd81893d6" },
   "nvim-surround": { "branch": "main", "commit": "1098d7b3c34adcfa7feb3289ee434529abd4afd1" },
@@ -40,5 +40,6 @@
   "submode.nvim": { "branch": "main", "commit": "d3cd2ceed6e2379caba6ec2e75dc50a9a832be63" },
   "telescope.nvim": { "branch": "master", "commit": "a0bbec21143c7bc5f8bb02e0005fa0b982edc026" },
   "todo-comments.nvim": { "branch": "main", "commit": "31e3c38ce9b29781e4422fc0322eb0a21f4e8668" },
+  "token": { "branch": "main", "commit": "97984f9bf273042e18b4d74764fd586593d9fa18" },
   "which-key.nvim": { "branch": "main", "commit": "3aab2147e74890957785941f0c1ad87d0a44c15a" }
 }
