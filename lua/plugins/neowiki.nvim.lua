@@ -8,7 +8,7 @@ return {
 			-- neowiki.nvim supports both absolute and tilde-expanded paths
 			{
 				name = "Wiki",
-				path = "~/workspace/5-cubed/journal/",
+				path = "~/wiki/",
 			},
 		},
 	},
