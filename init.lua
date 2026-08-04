@@ -62,6 +62,8 @@ vim.keymap.set("n", "<leader>n", ":bnext<CR>")
 vim.keymap.set("n", "<leader>p", ":bprevious<CR>")
 vim.keymap.set("n", "<leader>q", ":bd<CR>")
 
+vim.keymap.set({"n", "t"}), "<leader>cfp", ":let @+ = expand('%:p')<CR>")
+
 -- keymap for hop to f
 vim.keymap.set("n", "f", ":HopWord<CR>")
 
