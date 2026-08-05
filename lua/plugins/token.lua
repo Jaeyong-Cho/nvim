@@ -11,7 +11,7 @@ return {
 		terminal_colors = true,
 
 		-- Give inactive windows a quieter foreground and background.
-		dim_inactive = false,
+		dim_inactive = true,
 
 		-- Disable an attribute globally, including in overrides and plugin groups.
 		attributes = {
@@ -56,4 +56,3 @@ return {
 		vim.cmd.colorscheme("token")
 	end,
 }
-
