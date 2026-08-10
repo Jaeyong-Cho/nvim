@@ -19,7 +19,7 @@ end
 vim.opt.encoding = "utf-8"
 -- backup
 vim.opt.backup = false
-vim.opt.writebackup = false
+vim.opt.writebackup = falsee
 vim.opt.clipboard = "unnamedplus"
 vim.opt.number = true
 vim.opt.tabstop = 4
@@ -47,6 +47,7 @@ vim.keymap.set({ "n", "t" }, "<C-l>", ":NavigatorRight<CR>")
 vim.keymap.set({ "n", "t" }, "<C-k>", ":NavigatorUp<CR>")
 vim.keymap.set({ "n", "t" }, "<C-j>", ":NavigatorDown<CR>")
 
+vim.keymap.set({ "n", "t" }, "<leader>z", ":NoNeckPain<CR>")
 vim.keymap.set({ "n", "t" }, "<leader>sm", ":SmearCursorToggle<CR>")
 vim.keymap.set({ "n", "t" }, "<leader>tt", ":TodoFzfLua<CR>")
 vim.keymap.set({ "n", "t" }, "<leader>ff", ":FzfLua files<CR>")
