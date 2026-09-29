@@ -24,5 +24,7 @@ return {
 		vim.keymap.set({ "n", "v" }, "<leader>pc", "<Cmd>PiContinue<CR>", { desc = "Pi: continue session" })
 		vim.keymap.set({ "n", "v" }, "<leader>pr", "<Cmd>PiResume<CR>", { desc = "Pi: resume session" })
 		vim.keymap.set({ "n", "v" }, "<leader>pm", "<Cmd>PiSendMention<CR>", { desc = "Pi: mention file/selection" })
+		vim.keymap.set({ "n", "v" }, "<leader>ps", "<Cmd>PiSelectModel<CR>", { desc = "Pi: select model" })
+		vim.keymap.set({ "n", "v" }, "<leader>pt", "<Cmd>PiSelectThinking<CR>", { desc = "Pi: select thinking level" })
 	end,
 }
