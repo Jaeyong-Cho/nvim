@@ -5,13 +5,7 @@ return {
 		"HakonHarnes/img-clip.nvim",
 	},
 	opts = {
-		-- Start each new pi session with GPT-6 Luna at high reasoning effort.
-		cli = {
-			args = { "--model", "openai-codex/gpt-6-luna:high" },
 		},
-		-- Keep the model available in pi.nvim's model picker/cycling list.
-		models = { "gpt-6-luna" },
-	},
 	config = function(_, opts)
 		require("pi").setup(opts)
 
