@@ -1,0 +1,1 @@
+return { "kaar/nvim-herdr-navigator", event = "VeryLazy" }

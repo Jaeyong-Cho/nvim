@@ -30,6 +30,7 @@
   "neowiki.nvim": { "branch": "main", "commit": "482073ccc67772382b7f65def5e54cb1bf900713" },
   "no-neck-pain.nvim": { "branch": "main", "commit": "55f69b7ff536303dcd37460d7cbced9691b3f0a2" },
   "nvim-colorizer.lua": { "branch": "master", "commit": "72a05f62c52241bc7441c820eb53946f92b2e6a4" },
+  "nvim-herdr-navigator": { "branch": "master", "commit": "ec68f1a95a98e2174bb7467f72dc5a0b176b18be" },
   "nvim-lspconfig": { "branch": "master", "commit": "ac062d0d01c019c0dbdb798968f3e5d8b35c3853" },
   "nvim-notify": { "branch": "master", "commit": "8701bece920b38ea289b457f902e2ad184131a5d" },
   "nvim-origami": { "branch": "main", "commit": "a137d35eaabb7cd7be89228229c1aa5b057f5ed7" },
